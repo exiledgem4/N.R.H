@@ -191,7 +191,7 @@ hips_2.TextColor3 = Color3.fromRGB(0, 0, 0)
 hips_2.TextScaled = true
 hips_2.TextSize = 14.000
 hips_2.TextWrapped = true
-hips_2.Text = "Hip hieght"
+hips_2.Text = "Hip height"
 
 jump_3.Name = "jump"
 jump_3.Parent = Frame
