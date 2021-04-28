@@ -1,8 +1,3 @@
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
-
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local camoff = Instance.new("TextBox")
@@ -20,8 +15,6 @@ local hips_2 = Instance.new("TextLabel")
 local jump_3 = Instance.new("TextButton")
 local hips_3 = Instance.new("TextBox")
 local camoff_3 = Instance.new("TextButton")
-
---Properties:
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
