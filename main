@@ -1,1 +1,277 @@
-code here
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local camoff = Instance.new("TextBox")
+local maxangle = Instance.new("TextLabel")
+local camoff_2 = Instance.new("TextLabel")
+local speed = Instance.new("TextLabel")
+local maxangle_2 = Instance.new("TextBox")
+local speed_2 = Instance.new("TextBox")
+local jump = Instance.new("TextLabel")
+local maxangle_3 = Instance.new("TextButton")
+local jump_2 = Instance.new("TextBox")
+local hips = Instance.new("TextButton")
+local speed_3 = Instance.new("TextButton")
+local hips_2 = Instance.new("TextLabel")
+local jump_3 = Instance.new("TextButton")
+local hips_3 = Instance.new("TextBox")
+local camoff_3 = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.Position = UDim2.new(0.125, 0, 0.125, 0)
+Frame.Size = UDim2.new(0.75, 0, 0.75, 0)
+
+camoff.Name = "camoff"
+camoff.Parent = Frame
+camoff.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+camoff.Position = UDim2.new(0.777196884, 0, 0.0777777806, 0)
+camoff.Size = UDim2.new(0.159999996, 0, 0.300000012, 0)
+camoff.ClearTextOnFocus = false
+camoff.Font = Enum.Font.SourceSans
+camoff.Text = ""
+camoff.TextColor3 = Color3.fromRGB(255, 255, 255)
+camoff.TextScaled = true
+camoff.TextSize = 14.000
+camoff.TextWrapped = true
+
+maxangle.Name = "maxangle"
+maxangle.Parent = Frame
+maxangle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+maxangle.BackgroundTransparency = 1.000
+maxangle.BorderSizePixel = 0
+maxangle.Position = UDim2.new(0.421156883, 0, 0, 0)
+maxangle.Size = UDim2.new(0.159999996, 0, 0.0780000016, 0)
+maxangle.Font = Enum.Font.SourceSans
+maxangle.TextColor3 = Color3.fromRGB(0, 0, 0)
+maxangle.TextScaled = true
+maxangle.TextSize = 14.000
+maxangle.TextWrapped = true
+
+camoff_2.Name = "camoff"
+camoff_2.Parent = Frame
+camoff_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+camoff_2.BackgroundTransparency = 1.000
+camoff_2.BorderSizePixel = 0
+camoff_2.Position = UDim2.new(0.777196884, 0, 0, 0)
+camoff_2.Size = UDim2.new(0.159999996, 0, 0.0780000016, 0)
+camoff_2.Font = Enum.Font.SourceSans
+camoff_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+camoff_2.TextScaled = true
+camoff_2.TextSize = 14.000
+camoff_2.TextWrapped = true
+
+speed.Name = "speed"
+speed.Parent = Frame
+speed.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+speed.BackgroundTransparency = 1.000
+speed.BorderSizePixel = 0
+speed.Position = UDim2.new(0.0687500015, 0, 0, 0)
+speed.Size = UDim2.new(0.159999996, 0, 0.0780000016, 0)
+speed.Font = Enum.Font.SourceSans
+speed.TextColor3 = Color3.fromRGB(0, 0, 0)
+speed.TextScaled = true
+speed.TextSize = 14.000
+speed.TextWrapped = true
+speed.Text = "speed"
+
+maxangle_2.Name = "maxangle"
+maxangle_2.Parent = Frame
+maxangle_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+maxangle_2.Position = UDim2.new(0.421156883, 0, 0.0777777806, 0)
+maxangle_2.Size = UDim2.new(0.159999996, 0, 0.300000012, 0)
+maxangle_2.ClearTextOnFocus = false
+maxangle_2.Font = Enum.Font.SourceSans
+maxangle_2.Text = ""
+maxangle_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+maxangle_2.TextScaled = true
+maxangle_2.TextSize = 14.000
+maxangle_2.TextWrapped = true
+
+speed_2.Name = "speed"
+speed_2.Parent = Frame
+speed_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+speed_2.Position = UDim2.new(0.0687500015, 0, 0.0777777806, 0)
+speed_2.Size = UDim2.new(0.159999996, 0, 0.300000012, 0)
+speed_2.ClearTextOnFocus = false
+speed_2.Font = Enum.Font.SourceSans
+speed_2.Text = ""
+speed_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+speed_2.TextScaled = true
+speed_2.TextSize = 14.000
+speed_2.TextWrapped = true
+
+jump.Name = "jump"
+jump.Parent = Frame
+jump.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+jump.BackgroundTransparency = 1.000
+jump.BorderSizePixel = 0
+jump.Position = UDim2.new(0.243136913, 0, 0, 0)
+jump.Size = UDim2.new(0.159999996, 0, 0.0780000016, 0)
+jump.Font = Enum.Font.SourceSans
+jump.TextColor3 = Color3.fromRGB(0, 0, 0)
+jump.TextScaled = true
+jump.TextSize = 14.000
+jump.TextWrapped = true
+
+maxangle_3.Name = "maxangle"
+maxangle_3.Parent = Frame
+maxangle_3.BackgroundColor3 = Color3.fromRGB(102, 102, 102)
+maxangle_3.BackgroundTransparency = 0.500
+maxangle_3.BorderColor3 = Color3.fromRGB(108, 108, 108)
+maxangle_3.BorderSizePixel = 0
+maxangle_3.Position = UDim2.new(0.421156913, 0, 0.378581971, 0)
+maxangle_3.Size = UDim2.new(0.163000003, 0, 0.100000001, 0)
+maxangle_3.Font = Enum.Font.SourceSans
+maxangle_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+maxangle_3.TextScaled = true
+maxangle_3.TextSize = 14.000
+maxangle_3.TextWrapped = true
+
+jump_2.Name = "jump"
+jump_2.Parent = Frame
+jump_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+jump_2.Position = UDim2.new(0.243136913, 0, 0.0777777806, 0)
+jump_2.Size = UDim2.new(0.159999996, 0, 0.300000012, 0)
+jump_2.ClearTextOnFocus = false
+jump_2.Font = Enum.Font.SourceSans
+jump_2.Text = ""
+jump_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+jump_2.TextScaled = true
+jump_2.TextSize = 14.000
+jump_2.TextWrapped = true
+
+hips.Name = "hips"
+hips.Parent = Frame
+hips.BackgroundColor3 = Color3.fromRGB(102, 102, 102)
+hips.BackgroundTransparency = 0.500
+hips.BorderColor3 = Color3.fromRGB(108, 108, 108)
+hips.BorderSizePixel = 0
+hips.Position = UDim2.new(0.595704675, 0, 0.378581971, 0)
+hips.Size = UDim2.new(0.163000003, 0, 0.100000001, 0)
+hips.Font = Enum.Font.SourceSans
+hips.TextColor3 = Color3.fromRGB(0, 0, 0)
+hips.TextScaled = true
+hips.TextSize = 14.000
+hips.TextWrapped = true
+
+speed_3.Name = "speed"
+speed_3.Parent = Frame
+speed_3.BackgroundColor3 = Color3.fromRGB(102, 102, 102)
+speed_3.BackgroundTransparency = 0.500
+speed_3.BorderColor3 = Color3.fromRGB(108, 108, 108)
+speed_3.BorderSizePixel = 0
+speed_3.Position = UDim2.new(0.0687500089, 0, 0.378581971, 0)
+speed_3.Size = UDim2.new(0.163000003, 0, 0.100000001, 0)
+speed_3.Font = Enum.Font.SourceSans
+speed_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+speed_3.TextScaled = true
+speed_3.TextSize = 14.000
+speed_3.TextWrapped = true
+
+hips_2.Name = "hips"
+hips_2.Parent = Frame
+hips_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+hips_2.BackgroundTransparency = 1.000
+hips_2.BorderSizePixel = 0
+hips_2.Position = UDim2.new(0.599176884, 0, 0, 0)
+hips_2.Size = UDim2.new(0.159999996, 0, 0.0780000016, 0)
+hips_2.Font = Enum.Font.SourceSans
+hips_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+hips_2.TextScaled = true
+hips_2.TextSize = 14.000
+hips_2.TextWrapped = true
+
+jump_3.Name = "jump"
+jump_3.Parent = Frame
+jump_3.BackgroundColor3 = Color3.fromRGB(102, 102, 102)
+jump_3.BackgroundTransparency = 0.500
+jump_3.BorderColor3 = Color3.fromRGB(108, 108, 108)
+jump_3.BorderSizePixel = 0
+jump_3.Position = UDim2.new(0.243136927, 0, 0.378581971, 0)
+jump_3.Size = UDim2.new(0.163000003, 0, 0.100000001, 0)
+jump_3.Font = Enum.Font.SourceSans
+jump_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+jump_3.TextScaled = true
+jump_3.TextSize = 14.000
+jump_3.TextWrapped = true
+
+hips_3.Name = "hips"
+hips_3.Parent = Frame
+hips_3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+hips_3.Position = UDim2.new(0.599176884, 0, 0.0777777806, 0)
+hips_3.Size = UDim2.new(0.159999996, 0, 0.300000012, 0)
+hips_3.ClearTextOnFocus = false
+hips_3.Font = Enum.Font.SourceSans
+hips_3.Text = ""
+hips_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+hips_3.TextScaled = true
+hips_3.TextSize = 14.000
+hips_3.TextWrapped = true
+
+camoff_3.Name = "camoff"
+camoff_3.Parent = Frame
+camoff_3.BackgroundColor3 = Color3.fromRGB(102, 102, 102)
+camoff_3.BackgroundTransparency = 0.500
+camoff_3.BorderColor3 = Color3.fromRGB(108, 108, 108)
+camoff_3.BorderSizePixel = 0
+camoff_3.Position = UDim2.new(0.777196884, 0, 0.378581971, 0)
+camoff_3.Size = UDim2.new(0.163000003, 0, 0.100000001, 0)
+camoff_3.Font = Enum.Font.SourceSans
+camoff_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+camoff_3.TextScaled = true
+camoff_3.TextSize = 14.000
+camoff_3.TextWrapped = true
+
+-- Scripts:
+
+local function JYXYZY_fake_script() -- maxangle_3.maxangle 
+	local script = Instance.new('LocalScript', maxangle_3)
+	
+	local lp = game:GetService('Players').LocalPlayer.Character
+	print("Hello world!")
+	
+end
+coroutine.wrap(JYXYZY_fake_script)()
+local function DWZDZKM_fake_script() -- hips.hips 
+	local script = Instance.new('LocalScript', hips)
+	
+	local lp = game:GetService('Players').LocalPlayer.Character
+	print("Hello world!")
+	
+end
+coroutine.wrap(DWZDZKM_fake_script)()
+local function EEWX_fake_script() -- speed_3.speed 
+	local script = Instance.new('LocalScript', speed_3)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		game:GetService('Players').LocalPlayer.Character:FindFirstChild("Humanoid").WalkSpeed = speed_2.Text
+	end)
+	
+end
+coroutine.wrap(EEWX_fake_script)()
+local function YNGUN_fake_script() -- jump_3.jump 
+	local script = Instance.new('LocalScript', jump_3)
+	
+	local lp = game:GetService('Players').LocalPlayer.Character
+	print("Hello world!")
+	
+end
+coroutine.wrap(YNGUN_fake_script)()
+local function SGHJLF_fake_script() -- camoff_3.camoff 
+	local script = Instance.new('LocalScript', camoff_3)
+	
+	local lp = game:GetService('Players').LocalPlayer.Character
+	print("Hello world!")
+	
+end
+coroutine.wrap(SGHJLF_fake_script)()
