@@ -122,6 +122,7 @@ jump.TextColor3 = Color3.fromRGB(0, 0, 0)
 jump.TextScaled = true
 jump.TextSize = 14.000
 jump.TextWrapped = true
+jump.Text = "jump"
 
 maxangle_3.Name = "maxangle"
 maxangle_3.Parent = Frame
@@ -262,8 +263,10 @@ coroutine.wrap(EEWX_fake_script)()
 local function YNGUN_fake_script() -- jump_3.jump 
 	local script = Instance.new('LocalScript', jump_3)
 	
-	local lp = game:GetService('Players').LocalPlayer.Character
-	print("Hello world!")
+	script.Parent.MouseButton1Click:Connect(function()
+	game:GetService('Players').LocalPlayer.Character:FindFirstChild("Humanoid").UseJumpPower = true
+	game:GetService('Players').LocalPlayer.Character:FindFirstChild("Humanoid").JumpPower = jump_2.text
+	end)
 	
 end
 coroutine.wrap(YNGUN_fake_script)()
