@@ -1,8 +1,3 @@
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
-
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local camoff = Instance.new("TextBox")
@@ -20,8 +15,6 @@ local hips_2 = Instance.new("TextLabel")
 local jump_3 = Instance.new("TextButton")
 local hips_3 = Instance.new("TextBox")
 local camoff_3 = Instance.new("TextButton")
-
---Properties:
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -191,6 +184,7 @@ hips_2.TextColor3 = Color3.fromRGB(0, 0, 0)
 hips_2.TextScaled = true
 hips_2.TextSize = 14.000
 hips_2.TextWrapped = true
+hips_2.Text = "Hip height"
 
 jump_3.Name = "jump"
 jump_3.Parent = Frame
@@ -246,8 +240,9 @@ coroutine.wrap(JYXYZY_fake_script)()
 local function DWZDZKM_fake_script() -- hips.hips 
 	local script = Instance.new('LocalScript', hips)
 	
-	local lp = game:GetService('Players').LocalPlayer.Character
-	print("Hello world!")
+	script.Parent.MouseButton1Click:Connect(function()
+	game:GetService('Players').LocalPlayer.Character:FindFirstChild("Humanoid").HipHeight = hips_3.Text
+	end)
 	
 end
 coroutine.wrap(DWZDZKM_fake_script)()
