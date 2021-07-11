@@ -1,3 +1,4 @@
+--hi
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local camoff = Instance.new("TextBox")
